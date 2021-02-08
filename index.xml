@@ -14,7 +14,7 @@
       
       <guid>https://Eason366.github.io/post/blog/</guid>
       <description>How to Upload my Blog to Github Upload local server hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
- hugo --theme=m10c --baseUrl=&amp;quot;https://Eason366.github.io/&amp;quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m </description>
+ hugo --theme=m10c --baseUrl=&amp;quot;https://Eason366.github.io/&amp;quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m git push -u origin master </description>
     </item>
     
   </channel>
