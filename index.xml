@@ -6,16 +6,26 @@
     <description>Recent content on Eason Study Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Feb 2021 19:28:05 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Feb 2021 00:27:10 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown</title>
+      <link>https://Eason366.github.io/post/markdown/</link>
+      <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
+      
+      <guid>https://Eason366.github.io/post/markdown/</guid>
+      <description>Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
+Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level. For example, to create a heading level three (), use three number signs (e.</description>
+    </item>
+    
     <item>
       <title>How to Upload my Blog to Github</title>
       <link>https://Eason366.github.io/post/blog/</link>
       <pubDate>Sun, 07 Feb 2021 19:28:05 -0500</pubDate>
       
       <guid>https://Eason366.github.io/post/blog/</guid>
-      <description>How to Upload my Blog to Github Upload local server hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
-Upload to my Github hugo --theme=m10c --baseUrl=&amp;quot;https://Eason366.github.io/&amp;quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m git push -u origin master cd .. hugo server -t m10c --buildDrafts Use https://eason366.github.io/ to check.
-尝试 </description>
+      <description>How to Upload my Blog to Github Upload local server  hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
+Upload to my Github hugo --theme=m10c --baseUrl=&amp;quot;https://Eason366.github.io/&amp;quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m #&amp;quot;commit&amp;quot; git push -u origin master  Use https://eason366.github.io/ to check.
+Creat a new Blog hugo new post/#BlogName.md </description>
     </item>
     
   </channel>
