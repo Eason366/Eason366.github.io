@@ -14,11 +14,11 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Upload my Blog to Github"/>
 <meta name="twitter:description" content="How to Upload my Blog to Github Upload local server hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
- hugo --theme=m10c --baseUrl=&quot;https://Eason366.github.io/&quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m git push -u origin master "/>
+Upload to my Github hugo --theme=m10c --baseUrl=&quot;https://Eason366.github.io/&quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m git push -u origin master cd .. hugo server -t m10c --buildDrafts Use https://eason366.github.io/ to check."/>
 
     <meta property="og:title" content="How to Upload my Blog to Github" />
 <meta property="og:description" content="How to Upload my Blog to Github Upload local server hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
- hugo --theme=m10c --baseUrl=&quot;https://Eason366.github.io/&quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m git push -u origin master " />
+Upload to my Github hugo --theme=m10c --baseUrl=&quot;https://Eason366.github.io/&quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m git push -u origin master cd .. hugo server -t m10c --buildDrafts Use https://eason366.github.io/ to check." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Eason366.github.io/post/blog/" />
 <meta property="article:published_time" content="2021-02-07T19:28:05-05:00" />
@@ -62,7 +62,7 @@
 <h2 id="upload-local-server">Upload local server</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"> hugo server -t m10c --buildDrafts
 </code></pre></div><p>Use http://localhost:1313/ to check.</p>
-<h2 id="heading"></h2>
+<h2 id="upload-to-my-github">Upload to my Github</h2>
 <pre><code class="language-mardown" data-lang="mardown">hugo --theme=m10c --baseUrl=&quot;https://Eason366.github.io/&quot; --buildDrafts
 #Create web page
 cd public
@@ -70,7 +70,10 @@ cd public
 git add .
 git commit -m 
 git push -u origin master
-</code></pre>
+cd ..
+hugo server -t m10c --buildDrafts
+</code></pre><p>Use <a href="https://eason366.github.io/">https://eason366.github.io/</a> to check.</p>
+
     </div>
     <div class="post-footer">
       
