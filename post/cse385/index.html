@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>CSE 385 Database // Eason Study Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Yuchen(Eason) Wang" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://Eason366.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSE 385 Database"/>
+<meta name="twitter:description" content="2021-01-28   Create a Table CREATE TABLE dbo.tblFriends( friendId INT NOT NULL PRIMARY KEY IDENTITY, firstName VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, age INT NOT NULL DEFAULT(-1), phoneNumber VARCHAR(20) NOT NULL DEFAULT(&#39;(***) ***-****&#39;), [address] VARCHAR(200) NULL DEFAULT(NULL) );   Version 1: Creates many transactions INSERT INTO tblFriends (firstName, lastName, age, phoneNumber, [address]) VALUES(&#39;A&#39;, &#39;A&#39;, 22, &#39;A&#39;, &#39;A&#39;) INSERT INTO tblFriends (firstName, lastName, age, phoneNumber) VALUES (&#39;B&#39;, &#39;B&#39;, 22, &#39;B&#39;) INSERT INTO tblFriends (firstName, lastName, age) VALUES (&#39;C&#39;, &#39;C&#39;, 22) INSERT INTO tblFriends (firstName, lastName) VALUES (&#39;D&#39;, &#39;D&#39;) /* INSERT INTO tblFriends (firstName)VALUES (&#39;E&#39;) Cannot insert the value NULL into column &#39;lastName&#39;, table &#39;Example."/>
+
+    <meta property="og:title" content="CSE 385 Database" />
+<meta property="og:description" content="2021-01-28   Create a Table CREATE TABLE dbo.tblFriends( friendId INT NOT NULL PRIMARY KEY IDENTITY, firstName VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, age INT NOT NULL DEFAULT(-1), phoneNumber VARCHAR(20) NOT NULL DEFAULT(&#39;(***) ***-****&#39;), [address] VARCHAR(200) NULL DEFAULT(NULL) );   Version 1: Creates many transactions INSERT INTO tblFriends (firstName, lastName, age, phoneNumber, [address]) VALUES(&#39;A&#39;, &#39;A&#39;, 22, &#39;A&#39;, &#39;A&#39;) INSERT INTO tblFriends (firstName, lastName, age, phoneNumber) VALUES (&#39;B&#39;, &#39;B&#39;, 22, &#39;B&#39;) INSERT INTO tblFriends (firstName, lastName, age) VALUES (&#39;C&#39;, &#39;C&#39;, 22) INSERT INTO tblFriends (firstName, lastName) VALUES (&#39;D&#39;, &#39;D&#39;) /* INSERT INTO tblFriends (firstName)VALUES (&#39;E&#39;) Cannot insert the value NULL into column &#39;lastName&#39;, table &#39;Example." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Eason366.github.io/post/cse385/" />
+<meta property="article:published_time" content="2021-02-09T17:24:37-05:00" />
+<meta property="article:modified_time" content="2021-02-09T17:24:37-05:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Eason366.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Yuchen(Eason) Wang" /></a>
+      <h1>Eason Study Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+      </nav>
+      <p>I am a student of Miami University, my major is mathematics and statistics, and my minor is CSE. I hope to record and share my learning progress here.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/Eason366" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">CSE 385 Database</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 9, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+              <a class="tag" href="https://Eason366.github.io/tags/cse385/">CSE385</a>
+              <a class="tag" href="https://Eason366.github.io/tags/sql/">SQL</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li>
+<h1 id="2021-01-28">2021-01-28</h1>
+<ul>
+<li>
+<h3 id="create-a-table">Create a Table</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> dbo.tblFriends(
+    friendId            INT                     <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>        <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>                     <span style="color:#66d9ef">IDENTITY</span>,
+    firstName           VARCHAR(<span style="color:#ae81ff">20</span>)             <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    lastName            VARCHAR(<span style="color:#ae81ff">20</span>)             <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    age                 INT                     <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>        <span style="color:#66d9ef">DEFAULT</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>),
+    phoneNumber         VARCHAR(<span style="color:#ae81ff">20</span>)             <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>        <span style="color:#66d9ef">DEFAULT</span>(<span style="color:#e6db74">&#39;(***) ***-****&#39;</span>),
+    [address]           VARCHAR(<span style="color:#ae81ff">200</span>)            <span style="color:#66d9ef">NULL</span>            <span style="color:#66d9ef">DEFAULT</span>(<span style="color:#66d9ef">NULL</span>)
+);
+</code></pre></div></li>
+<li>
+<h3 id="version-1-creates-many-transactions">Version 1: Creates many transactions</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tblFriends (firstName, lastName, age, phoneNumber, [address])       <span style="color:#66d9ef">VALUES</span>(<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>)
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tblFriends (firstName, lastName, age, phoneNumber)                  <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;B&#39;</span>)
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tblFriends (firstName, lastName, age)                               <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#ae81ff">22</span>)
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tblFriends (firstName, lastName)                                    <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;D&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>)
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">INSERT INTO tblFriends (firstName)VALUES (&#39;E&#39;)
+</span><span style="color:#75715e">Cannot insert the value NULL into column &#39;lastName&#39;, table &#39;Example.dbo.tblFriends&#39;; 
+</span><span style="color:#75715e">column does not allow nulls. INSERT fails.
+</span><span style="color:#75715e">The statement has been terminated.
+</span><span style="color:#75715e">*/</span>
+</code></pre></div></li>
+<li>
+<h3 id="version-2-creates-1-transaction">Version 2: Creates 1 transaction</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tblFriends (firstName, lastName, age, phoneNumber, [address])	
+<span style="color:#66d9ef">VALUES</span> 
+    (<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>),
+    (<span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>),
+    (<span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>),
+    (<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#ae81ff">22</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>)
+</code></pre></div></li>
+<li>
+<h3 id="read-file">READ file</h3>
+<p><a href="https://github.com/Eason366/CSE385/blob/master/temp/CarData.txt">CarData.txt</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> tblCars (
+Id		INT			<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>		<span style="color:#66d9ef">IDENTITY</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)	<span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+vin		VARCHAR(<span style="color:#ae81ff">17</span>)	<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+make	VARCHAR(<span style="color:#ae81ff">30</span>)	<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+model	VARCHAR(<span style="color:#ae81ff">30</span>)	<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+<span style="color:#66d9ef">year</span>	INT			<span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+);
+      
+BULK <span style="color:#66d9ef">INSERT</span> tblCars
+<span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#39;c:\temp\CarData.txt&#39;</span>
+<span style="color:#66d9ef">WITH</span> (
+    FIRSTROW <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>,
+    ROWTERMINATOR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\n&#39;</span>,
+    FIELDTERMINATOR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\t&#39;</span>,
+    KEEPIDENTITY
+);
+<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tblCars <span style="color:#66d9ef">WHERE</span> make <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Honda&#39;</span>;  <span style="color:#75715e">-- 29 records 
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">UPDATE</span> tblCars <span style="color:#66d9ef">SET</span> make <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;HONDA&#39;</span> <span style="color:#66d9ef">WHERE</span> make <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Honda&#39;</span>;
+<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> tblCars <span style="color:#66d9ef">WHERE</span> make <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Honda&#39;</span>; 
+</code></pre></div></li>
+<li>
+<h3 id="drop-and-truncate-table">DROP and TRUNCATE TABLE</h3>
+<ul>
+<li>
+<p>DROP</p>
+<p>DROP will drop (delete) the whole structure in one go i.e. it removes the named elements of the schema. By using this command the existence of the whole table is finished or say lost.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> tblCars
+</code></pre></div><ul>
+<li>
+<p>TRUNCATE</p>
+<p>TRUNCATE use to delete all the rows of a relation (table) in one go. With the help of “TRUNCATE” command we can’t delete the single row.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">    <span style="color:#66d9ef">TRUNCATE</span> <span style="color:#66d9ef">TABLE</span> tblCars;
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
