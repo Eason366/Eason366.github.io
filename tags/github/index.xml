@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on Eason Study Blog</title>
+    <link>https://Eason366.github.io/tags/github/</link>
+    <description>Recent content in GitHub on Eason Study Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Feb 2021 19:28:05 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Upload my Blog to Github</title>
+      <link>https://Eason366.github.io/post/blog/</link>
+      <pubDate>Sun, 07 Feb 2021 19:28:05 -0500</pubDate>
+      
+      <guid>https://Eason366.github.io/post/blog/</guid>
+      <description>How to Upload my Blog to Github Upload local server  hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
+Upload to my Github hugo --theme=m10c --baseUrl=&amp;quot;https://Eason366.github.io/&amp;quot; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m #&amp;quot;commit&amp;quot; git push -u origin master  Use https://eason366.github.io/ to check.
+Creat a new Blog hugo new post/#BlogName.md </description>
+    </item>
+    
+  </channel>
+</rss>
