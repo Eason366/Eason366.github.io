@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Regression Analysis on Wine Qualit // Eason Study Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Yuchen(Eason) Wang" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://Eason366.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Regression Analysis on Wine Qualit"/>
+<meta name="twitter:description" content="Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R."/>
+
+    <meta property="og:title" content="Regression Analysis on Wine Qualit" />
+<meta property="og:description" content="Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Eason366.github.io/post/project/" />
+<meta property="article:published_time" content="2021-02-08T02:24:35-05:00" />
+<meta property="article:modified_time" content="2021-02-08T02:24:35-05:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Eason366.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Yuchen(Eason) Wang" /></a>
+      <h1>Eason Study Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+      </nav>
+      <p>I am a student of Miami University, my major is mathematics and statistics, and my minor is CSE. I hope to record and share my learning progress here.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/Eason366" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Regression Analysis on Wine Qualit</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 8, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+<p>The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/">https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/</a>. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.</p>
+<h1 id="exploratory-analysis">Exploratory Analysis</h1>
+<p>Exploratory analysis involved carrying out descriptive statistics for all the variables of interest in the study. For the variable residual sugar, the minimum residual sugar was 0.9 while the maximum was 15.50. The mean residual sugar was 2.539 and the median value was 2.20. For the variable chlorides, the minimum chloride was 0.012 while the maximum was 0.611. The mean chloride level was 0.087 and the median value was 0.079. For the variable total sulfur dioxide, the minimum value was 6 while the maximum was 289. The mean total sulfur dioxide was 46.47 and the median value was 38. For the variable pH, the minimum value was 2.74 while the maximum was 4.01. The mean pH was 3.311 and the median value was 3.31. For the variable sulphates, the minimum value was 0.33 while the maximum was 2. The mean for sulphate was 0.6581 and the median value was 0.62. For the variable alcohol, the minimum value was 8.40 while the maximum was 14.90. The mean for alcohol was 10.42 and the median value was 10.20. For the variable quality, the minimum value was 3 while the maximum was 8. The mean value for quality was 5.638 while the median was 6.00.</p>
+<h1 id="model-choose">Model Choose</h1>
+<h1 id="model-assumption">Model Assumption</h1>
+<p>Before regression analysis could be carried out, the data was analyzed to investigate its suitability for carrying out multiple regression analysis. To start with, the data was checked for multicollinearity by computing correlations among all the independent variables.  The results of the correlation showed that there was no multicollinearity as no two independent variables had strong correlations with each other. To check if residuals are normally distributed, a QQ plot was also computed in R. The QQ plot for residuals did not show much deviation from the normal. Homoscedasticity assumption was also checked by making a plot of residuals vs predicted values. The plot showed that the assumption was met as values were randomly distributed across the fit line (Illowsky, 2013).  The model assumptions were mostly met and therefore multiple regression could be carried out in R.</p>
+<h1 id="model-and-analysis">Model and Analysis</h1>
+<p>Multiple linear regression was computed with quality as the dependent variable and residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol as the independent variables.  The overall regression model was statistically significant, F(6,1592) =121.6,  p value&lt;0.0001. This means that a majority of the independent variables are statistically significant predictors of quality. The t analysis of individual variables showed that the variables chlorides (t=-6.827, p&lt;0.001), total sulfur dioxide (t=-5.213, p&lt;0.001), pH (t=-6.561, p&lt;0.001), sulphates (t=10.726, p&lt;0.001), and alcohol (t=18.641=, p&lt;0.001) are significant predictors of quality. Residual sugar was not a statistically significant predictor of quality, t= 0.661, p=0.509.
+The slope coefficient of chlorides was equal to -2.766. This indicates that quality decreases by 2.766 for every 1 increase in the amount of chlorides. The slope coefficient of pH was equal to -0.7588. This indicates that quality decreases by 0.7588 for every 1 increase in the pH. The slope coefficient of total sulfur dioxide was equal to -0.0027888. This indicates that quality decreases by 0.003 for every 1 increase in the total sulfur dioxide. The slope coefficient of alcohol was equal to 0.3207. This indicates that quality increases by 0.3207 for every 1 increase in the amount of alcohol. The slope coefficient of sulphates was equal to 1.18. This indicates that quality increases by 1.18 for every 1 increase in the amount of alcohol.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In conclusion, the results of the multiple linear regression showed that that the variables chlorides, total sulfur dioxide, pH, sulphates, and alcohol are significant predictors of quality. One can therefore use the model to predict the quality of wine based on these variables.</p>
+<h1 id="references">References</h1>
+<p>Illowsky, B., Dean, S., &amp; Illowsky, B. (2013). Introductory statistics. OpenStax.</p>
+<h1 id="appendix">Appendix</h1>
+<p><a href="http://ceclnx01.cec.miamioh.edu/~wangy366/Regression-Analysis-on-Wine-Qualit/" title="Wine Quality">All project contents</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

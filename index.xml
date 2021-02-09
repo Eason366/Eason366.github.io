@@ -6,7 +6,16 @@
     <description>Recent content on Eason Study Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Feb 2021 00:27:10 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Feb 2021 02:24:35 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regression Analysis on Wine Qualit</title>
+      <link>https://Eason366.github.io/post/project/</link>
+      <pubDate>Mon, 08 Feb 2021 02:24:35 -0500</pubDate>
+      
+      <guid>https://Eason366.github.io/post/project/</guid>
+      <description>Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.</description>
+    </item>
+    
     <item>
       <title>Markdown</title>
       <link>https://Eason366.github.io/post/markdown/</link>
