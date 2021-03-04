@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Plane War Game Program Introduction I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own.'><title>Plane War</title>
+
+<link rel='canonical' href='https://Eason366.github.io/p/plane-war/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Plane War'>
+<meta property='og:description' content='Plane War Game Program Introduction I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own.'>
+<meta property='og:url' content='https://Eason366.github.io/p/plane-war/'>
+<meta property='og:site_name' content='Study Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-03-04T10:02:08-05:00'/><meta property='article:modified_time' content='2021-03-04T10:02:08-05:00'/>
+<meta name="twitter:title" content="Plane War">
+<meta name="twitter:description" content="Plane War Game Program Introduction I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own.">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hucec21070b5883ef78ab5dfe0ef4bb016_62567_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://Eason366.github.io/">Study Blog</a></h1>
+        <h2 class="site-description">I am a student of Miami University, my major is mathematics and statistics, and my minor is CSE. I hope to record and share my learning progress here.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://Eason366.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/plane-war/">Plane War</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 04, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="plane-war-game-program">Plane War Game Program</h1>
+<h2 id="introduction">Introduction</h2>
+<p>I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own. I chose to program an airplane war game.</p>
+<hr>
+<h2 id="create-a-graphics-window">Create a Graphics Window</h2>
+<ul>
+<li>
+<h3 id="load-pygame-model">Load Pygame model</h3>
+<p>Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">from</span> <span class="nn">pygame</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div></li>
+<li>
+<h3 id="initialization-and-exit-of-the-game">Initialization and exit of the game</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Method:</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">pygame.init()</td>
+<td style="text-align:center">initialize all imported pygame modules, use it before another modules.</td>
+</tr>
+<tr>
+<td style="text-align:center">pygame.quit()</td>
+<td style="text-align:center">uninitialize all pygame modules, use it when you want exit the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div></li>
+<li>
+<h3 id="create-the-main-game-window">Create the main game window</h3>
+<p><code>pygame</code> has a special method <code>pygame.display</code> for creating and managing game windows</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">pygame.display.set_mode()</td>
+<td style="text-align:center">Initialize the game display window</td>
+</tr>
+<tr>
+<td style="text-align:center">pygame.display.update()</td>
+<td style="text-align:center">Refresh the screen content display</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python">    <span class="n">set_mode</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vsync</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Surface</span>
+</code></pre></div><p>This function will create a display Surface. The arguments passed in are requests for a display type. The actual created display will be the best possible match supported by the system.</p>
+<p><strong>Parameter</strong></p>
+<ul>
+<li>The <code>size</code> argument is a pair of numbers representing the width and height.</li>
+<li>The <code>flags</code> argument is a collection of additional options.</li>
+<li>The <code>depth</code> argument represents the number of bits to use for color.</li>
+</ul>
+<p>Here are the display flags you will want to choose from:</p>
+<pre><code>pygame.FULLSCREEN    create a fullscreen display
+pygame.DOUBLEBUF     recommended for HWSURFACE or OPENGL
+pygame.HWSURFACE     hardware accelerated, only in FULLSCREEN
+pygame.OPENGL        create an OpenGL-renderable display
+pygame.RESIZABLE     display window should be sizeable
+pygame.NOFRAME       display window will have no border or controls
+pygame.SCALED        resolution depends on desktop size and scale graphics
+pygame.SHOWN         window is opened in visible mode (default)
+pygame.HIDDEN        window is opened in hidden mode
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="c1"># Set the windows</span>
+    <span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">700</span><span class="p">),</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div></li>
+<li>
+<h3 id="game-loop">Game loop</h3>
+<ul>
+<li>In order to ensure that the <strong>game program</strong> does not exit immediately after it is started, a game loop is usually added to the <strong>game program</strong></li>
+<li>The so-called <strong>game loop</strong> is an <strong>infinite loop</strong></li>
+<li>Below the code for creating the game window, add an infinite loop</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="c1"># Set the windows</span>
+    <span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">700</span><span class="p">),</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</code></pre></div></li>
+<li>
+<h3 id="add-events-listener">Add Events Listener</h3>
+<p>When we run the program, we find that the window has appeared, but we cannot manipulate the window, or even close the window. Therefore, we should add an Events Listener to control the closing of the window.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="c1"># Set Events Listener</span>
+<span class="k">for</span> <span class="n">events</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">events</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="nb">exit</span><span class="p">()</span>
+</code></pre></div></li>
+</ul>
+<hr>
+<h2 id="draw-image">Draw image</h2>
+<p>In the game, most of the <strong>game elements</strong> that can be seen are <strong>images</strong></p>
+<ul>
+<li>
+<p>We need to follow <strong>three steps</strong> to display the <strong>images</strong> in windows:</p>
+<ul>
+<li>Use <code>pygame.image.load()</code> to load image data</li>
+<li>Call the <code>blit</code> method to draw the image to the specified position</li>
+<li>Call the <code>pygame.display.update()</code> method to update the display of the entire screen</li>
+</ul>
+</li>
+<li>
+<h3 id="background-and-player">Background and Player</h3>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="c1"># Set the windows</span>
+    <span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">700</span><span class="p">),</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">background</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&#34;images/background.png&#34;</span><span class="p">)</span>
+    <span class="n">player</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&#34;images/me1.png&#34;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c1"># Set Events Listener</span>
+        <span class="k">for</span> <span class="n">events</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">events</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+                <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+                <span class="nb">exit</span><span class="p">()</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="p">((</span><span class="mi">480</span> <span class="o">-</span> <span class="mi">102</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</code></pre></div><ul>
+<li>NOTE: Please blit the Background first, then blit the Player so that the Player is on top of the Background</li>
+</ul>
+<hr>
+</li>
+</ul>
+<h2 id="control-plane-and-keyboard-listener">Control Plane and Keyboard Listener</h2>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Study Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

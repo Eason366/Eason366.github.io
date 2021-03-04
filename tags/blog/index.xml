@@ -9,12 +9,12 @@
     <lastBuildDate>Sun, 07 Feb 2021 19:28:05 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Upload my Blog to Github</title>
-      <link>https://Eason366.github.io/post/blog/</link>
+      <link>https://Eason366.github.io/p/how-to-upload-my-blog-to-github/</link>
       <pubDate>Sun, 07 Feb 2021 19:28:05 -0500</pubDate>
       
-      <guid>https://Eason366.github.io/post/blog/</guid>
-      <description>How to Upload my Blog to Github Upload local server hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
-Upload to my Github hugo --theme=m10c --baseUrl=&amp;#34;https://Eason366.github.io/&amp;#34; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m #&amp;#34;commit&amp;#34; git push -u origin master Use https://eason366.github.io/ to check.
+      <guid>https://Eason366.github.io/p/how-to-upload-my-blog-to-github/</guid>
+      <description>How to Upload my Blog to Github Upload local server hugo server -t hugo-theme-stack --buildDrafts Use http://localhost:1313/ to check.
+Upload to my Github hugo --theme=hugo-theme-stack --baseUrl=&amp;#34;https://Eason366.github.io/&amp;#34; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m &amp;#34;commit&amp;#34; git push -u origin master Use https://eason366.github.io/ to check.
 Creat a new Blog hugo new post/#BlogName.md </description>
     </item>
     

@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 09 Feb 2021 17:24:37 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSE 385 Database</title>
-      <link>https://Eason366.github.io/post/cse385/</link>
+      <link>https://Eason366.github.io/p/cse-385-database/</link>
       <pubDate>Tue, 09 Feb 2021 17:24:37 -0500</pubDate>
       
-      <guid>https://Eason366.github.io/post/cse385/</guid>
+      <guid>https://Eason366.github.io/p/cse-385-database/</guid>
       <description>2021-01-28   Create a Table CREATE TABLE dbo.tblFriends( friendId INT NOT NULL PRIMARY KEY IDENTITY, firstName VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, age INT NOT NULL DEFAULT(-1), phoneNumber VARCHAR(20) NOT NULL DEFAULT(&amp;#39;(***) ***-****&amp;#39;), [address] VARCHAR(200) NULL DEFAULT(NULL) );   Version 1: Creates many transactions INSERT INTO tblFriends (firstName, lastName, age, phoneNumber, [address]) VALUES(&amp;#39;A&amp;#39;, &amp;#39;A&amp;#39;, 22, &amp;#39;A&amp;#39;, &amp;#39;A&amp;#39;) INSERT INTO tblFriends (firstName, lastName, age, phoneNumber) VALUES (&amp;#39;B&amp;#39;, &amp;#39;B&amp;#39;, 22, &amp;#39;B&amp;#39;) INSERT INTO tblFriends (firstName, lastName, age) VALUES (&amp;#39;C&amp;#39;, &amp;#39;C&amp;#39;, 22) INSERT INTO tblFriends (firstName, lastName) VALUES (&amp;#39;D&amp;#39;, &amp;#39;D&amp;#39;) /* INSERT INTO tblFriends (firstName)VALUES (&amp;#39;E&amp;#39;) Cannot insert the value NULL into column &amp;#39;lastName&amp;#39;, table &amp;#39;Example.</description>
     </item>
     

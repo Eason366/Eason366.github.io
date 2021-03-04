@@ -1,59 +1,486 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Study Blog</title>
-    <link>https://Eason366.github.io/</link>
-    <description>Recent content on Study Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 10:02:08 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Plane_War</title>
-      <link>https://Eason366.github.io/post/plane_war/</link>
-      <pubDate>Thu, 04 Mar 2021 10:02:08 -0500</pubDate>
+    <channel>
+        <title>Study Blog</title>
+        <link>https://Eason366.github.io/</link>
+        <description>Recent content on Study Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 04 Mar 2021 10:02:08 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Plane War</title>
+        <link>https://Eason366.github.io/p/plane-war/</link>
+        <pubDate>Thu, 04 Mar 2021 10:02:08 -0500</pubDate>
+        
+        <guid>https://Eason366.github.io/p/plane-war/</guid>
+        <description>&lt;h1 id=&#34;plane-war-game-program&#34;&gt;Plane War Game Program&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own. I chose to program an airplane war game.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;create-a-graphics-window&#34;&gt;Create a Graphics Window&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;load-pygame-model&#34;&gt;Load Pygame model&lt;/h3&gt;
+&lt;p&gt;Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pygame&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pygame&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;initialization-and-exit-of-the-game&#34;&gt;Initialization and exit of the game&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Method:&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;pygame.init()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;initialize all imported pygame modules, use it before another modules.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;pygame.quit()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;uninitialize all pygame modules, use it when you want exit the game.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;create-the-main-game-window&#34;&gt;Create the main game window&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;pygame&lt;/code&gt; has a special method &lt;code&gt;pygame.display&lt;/code&gt; for creating and managing game windows&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Method&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;pygame.display.set_mode()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Initialize the game display window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;pygame.display.update()&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Refresh the screen content display&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span class=&#34;n&#34;&gt;set_mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vsync&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Surface&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function will create a display Surface. The arguments passed in are requests for a display type. The actual created display will be the best possible match supported by the system.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameter&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;size&lt;/code&gt; argument is a pair of numbers representing the width and height.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;flags&lt;/code&gt; argument is a collection of additional options.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;depth&lt;/code&gt; argument represents the number of bits to use for color.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are the display flags you will want to choose from:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pygame.FULLSCREEN    create a fullscreen display
+pygame.DOUBLEBUF     recommended for HWSURFACE or OPENGL
+pygame.HWSURFACE     hardware accelerated, only in FULLSCREEN
+pygame.OPENGL        create an OpenGL-renderable display
+pygame.RESIZABLE     display window should be sizeable
+pygame.NOFRAME       display window will have no border or controls
+pygame.SCALED        resolution depends on desktop size and scale graphics
+pygame.SHOWN         window is opened in visible mode (default)
+pygame.HIDDEN        window is opened in hidden mode
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Set the windows&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;screen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;480&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;700&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;game-loop&#34;&gt;Game loop&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;In order to ensure that the &lt;strong&gt;game program&lt;/strong&gt; does not exit immediately after it is started, a game loop is usually added to the &lt;strong&gt;game program&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The so-called &lt;strong&gt;game loop&lt;/strong&gt; is an &lt;strong&gt;infinite loop&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Below the code for creating the game window, add an infinite loop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Set the windows&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;screen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;480&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;700&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;update&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;add-events-listener&#34;&gt;Add Events Listener&lt;/h3&gt;
+&lt;p&gt;When we run the program, we find that the window has appeared, but we cannot manipulate the window, or even close the window. Therefore, we should add an Events Listener to control the closing of the window.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Set Events Listener&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;events&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;events&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QUIT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;draw-image&#34;&gt;Draw image&lt;/h2&gt;
+&lt;p&gt;In the game, most of the &lt;strong&gt;game elements&lt;/strong&gt; that can be seen are &lt;strong&gt;images&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We need to follow &lt;strong&gt;three steps&lt;/strong&gt; to display the &lt;strong&gt;images&lt;/strong&gt; in windows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;pygame.image.load()&lt;/code&gt; to load image data&lt;/li&gt;
+&lt;li&gt;Call the &lt;code&gt;blit&lt;/code&gt; method to draw the image to the specified position&lt;/li&gt;
+&lt;li&gt;Call the &lt;code&gt;pygame.display.update()&lt;/code&gt; method to update the display of the entire screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;background-and-player&#34;&gt;Background and Player&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Set the windows&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;screen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;480&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;700&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;images/background.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;player&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;images/me1.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Set Events Listener&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;events&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;events&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QUIT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+                &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;screen&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;screen&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;player&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;480&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;102&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;pygame&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;update&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;NOTE: Please blit the Background first, then blit the Player so that the Player is on top of the Background&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;control-plane-and-keyboard-listener&#34;&gt;Control Plane and Keyboard Listener&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title>CSE 385 Database</title>
+        <link>https://Eason366.github.io/p/cse-385-database/</link>
+        <pubDate>Tue, 09 Feb 2021 17:24:37 -0500</pubDate>
+        
+        <guid>https://Eason366.github.io/p/cse-385-database/</guid>
+        <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;2021-01-28&#34;&gt;2021-01-28&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;create-a-table&#34;&gt;Create a Table&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dbo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tblFriends&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;friendId&lt;/span&gt;            &lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;                     &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;                     &lt;span class=&#34;k&#34;&gt;IDENTITY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;firstName&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;             &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;lastName&lt;/span&gt;            &lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;             &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;                 &lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;                     &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;phoneNumber&lt;/span&gt;         &lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;             &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(***) ***-****&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;            &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;            &lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;version-1-creates-many-transactions&#34;&gt;Version 1: Creates many transactions&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblFriends&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firstName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lastName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phoneNumber&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;       &lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblFriends&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firstName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lastName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phoneNumber&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;                  &lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblFriends&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firstName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lastName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;                               &lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblFriends&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firstName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lastName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;                                    &lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;/*
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;INSERT INTO tblFriends (firstName)VALUES (&amp;#39;E&amp;#39;)
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;Cannot insert the value NULL into column &amp;#39;lastName&amp;#39;, table &amp;#39;Example.dbo.tblFriends&amp;#39;; 
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;column does not allow nulls. INSERT fails.
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;The statement has been terminated.
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;version-2-creates-1-transaction&#34;&gt;Version 2: Creates 1 transaction&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblFriends&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firstName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lastName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;age&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;phoneNumber&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;	
+&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt; 
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;read-file&#34;&gt;READ file&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Eason366/CSE385/blob/master/temp/CarData.txt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CarData.txt&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Id&lt;/span&gt;		&lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;			&lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;		&lt;span class=&#34;k&#34;&gt;IDENTITY&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;vin&lt;/span&gt;		&lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt;	&lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;	&lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;	&lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;year&lt;/span&gt;	&lt;span class=&#34;nb&#34;&gt;INT&lt;/span&gt;			&lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
       
-      <guid>https://Eason366.github.io/post/plane_war/</guid>
-      <description>Plane War Game Program Introduction I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own.</description>
-    </item>
-    
-    <item>
-      <title>CSE 385 Database</title>
-      <link>https://Eason366.github.io/post/cse385/</link>
-      <pubDate>Tue, 09 Feb 2021 17:24:37 -0500</pubDate>
-      
-      <guid>https://Eason366.github.io/post/cse385/</guid>
-      <description>2021-01-28   Create a Table CREATE TABLE dbo.tblFriends( friendId INT NOT NULL PRIMARY KEY IDENTITY, firstName VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, age INT NOT NULL DEFAULT(-1), phoneNumber VARCHAR(20) NOT NULL DEFAULT(&amp;#39;(***) ***-****&amp;#39;), [address] VARCHAR(200) NULL DEFAULT(NULL) );   Version 1: Creates many transactions INSERT INTO tblFriends (firstName, lastName, age, phoneNumber, [address]) VALUES(&amp;#39;A&amp;#39;, &amp;#39;A&amp;#39;, 22, &amp;#39;A&amp;#39;, &amp;#39;A&amp;#39;) INSERT INTO tblFriends (firstName, lastName, age, phoneNumber) VALUES (&amp;#39;B&amp;#39;, &amp;#39;B&amp;#39;, 22, &amp;#39;B&amp;#39;) INSERT INTO tblFriends (firstName, lastName, age) VALUES (&amp;#39;C&amp;#39;, &amp;#39;C&amp;#39;, 22) INSERT INTO tblFriends (firstName, lastName) VALUES (&amp;#39;D&amp;#39;, &amp;#39;D&amp;#39;) /* INSERT INTO tblFriends (firstName)VALUES (&amp;#39;E&amp;#39;) Cannot insert the value NULL into column &amp;#39;lastName&amp;#39;, table &amp;#39;Example.</description>
-    </item>
-    
-    <item>
-      <title>Markdown Guide</title>
-      <link>https://Eason366.github.io/post/markdown/</link>
-      <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
-      
-      <guid>https://Eason366.github.io/post/markdown/</guid>
-      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
-Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</description>
-    </item>
-    
-    <item>
-      <title>How to Upload my Blog to Github</title>
-      <link>https://Eason366.github.io/post/blog/</link>
-      <pubDate>Sun, 07 Feb 2021 19:28:05 -0500</pubDate>
-      
-      <guid>https://Eason366.github.io/post/blog/</guid>
-      <description>How to Upload my Blog to Github Upload local server hugo server -t m10c --buildDrafts Use http://localhost:1313/ to check.
-Upload to my Github hugo --theme=m10c --baseUrl=&amp;#34;https://Eason366.github.io/&amp;#34; --buildDrafts #Create web page cd public #Enter the public folder git add . git commit -m #&amp;#34;commit&amp;#34; git push -u origin master Use https://eason366.github.io/ to check.
-Creat a new Blog hugo new post/#BlogName.md </description>
-    </item>
-    
-    <item>
-      <title>Regression Analysis on Wine Qualit</title>
-      <link>https://Eason366.github.io/post/project/</link>
-      <pubDate>Wed, 02 Dec 2020 02:24:35 -0500</pubDate>
-      
-      <guid>https://Eason366.github.io/post/project/</guid>
-      <description>Introduction Exploratory Analysis Model Choose Model Assumption Model and Analysis Conclusion References Appendix  Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.</description>
-    </item>
-    
-  </channel>
+&lt;span class=&#34;n&#34;&gt;BULK&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c:\temp\CarData.txt&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WITH&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;FIRSTROW&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ROWTERMINATOR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;FIELDTERMINATOR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\t&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;KEEPIDENTITY&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Honda&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;-- 29 records 
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;UPDATE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;HONDA&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Honda&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Honda&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;drop-and-truncate-table&#34;&gt;DROP and TRUNCATE TABLE&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DROP&lt;/p&gt;
+&lt;p&gt;DROP will drop (delete) the whole structure in one go i.e. it removes the named elements of the schema. By using this command the existence of the whole table is finished or say lost.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;EXISTS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;TRUNCATE&lt;/p&gt;
+&lt;p&gt;TRUNCATE use to delete all the rows of a relation (table) in one go. With the help of “TRUNCATE” command we can’t delete the single row.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;    &lt;span class=&#34;k&#34;&gt;TRUNCATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tblCars&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Markdown Guide</title>
+        <link>https://Eason366.github.io/p/markdown-guide/</link>
+        <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
+        
+        <guid>https://Eason366.github.io/p/markdown-guide/</guid>
+        <description>&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#overview&#34; &gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#headings&#34; &gt;Headings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#bold&#34; &gt;Bold&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#italic&#34; &gt;Italic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#bold-and-italic&#34; &gt;Bold and Italic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#blockquotes&#34; &gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#lists&#34; &gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#horizontal-rules&#34; &gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#links&#34; &gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#images&#34; &gt;Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#reference&#34; &gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.&lt;/p&gt;
+&lt;h1 id=&#34;headings&#34;&gt;Headings&lt;/h1&gt;
+&lt;p&gt;To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level. For example, to create a heading level three (&lt;!-- raw HTML omitted --&gt;), use three number signs (e.g., ### My Header).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# Heading level 1 # #
+&lt;/span&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;## Heading level 2 ## ##
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;### Heading level 3 ### ###
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;#### Heading level 4 #### ####
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;##### Heading level 5 ##### #####
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;###### Heading level 6 ###### ######
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;bold&#34;&gt;Bold&lt;/h1&gt;
+&lt;p&gt;To bold text, add two asterisks or underscores before and after a word or phrase. To bold the middle of a word for emphasis, add two asterisks without spaces around the letters&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I just love **bold text**.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I just love &lt;strong&gt;bold text&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Love**is**bold
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Love&lt;strong&gt;is&lt;/strong&gt;bold&lt;/p&gt;
+&lt;h1 id=&#34;italic&#34;&gt;Italic&lt;/h1&gt;
+&lt;p&gt;To italicize text, add one asterisk or underscore before and after a word or phrase. To italicize the middle of a word for emphasis, add one asterisk without spaces around the letters.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Italicized text is the *cat&#39;s meow*.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Italicized text is the &lt;em&gt;cat&amp;rsquo;s meow&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A*cat*meow
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A&lt;em&gt;cat&lt;/em&gt;meow&lt;/p&gt;
+&lt;h1 id=&#34;bold-and-italic&#34;&gt;Bold and Italic&lt;/h1&gt;
+&lt;p&gt;To emphasize text with bold and italics at the same time, add three asterisks or underscores before and after a word or phrase. To bold and italicize the middle of a word for emphasis, add three asterisks without spaces around the letters.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This text is ***really important***.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This text is &lt;em&gt;&lt;strong&gt;really important&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is really***very***important text.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is really&lt;em&gt;&lt;strong&gt;very&lt;/strong&gt;&lt;/em&gt;important text.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquotes can be nested. Add a &amp;raquo; in front of the paragraph you want to nest.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; Blockquotes
+&amp;gt;
+&amp;gt;&amp;gt; Blockquotes
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Blockquotes&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquotes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; #### The quarterly results look great!
+&amp;gt;
+&amp;gt; - Revenue was off the chart.
+&amp;gt; - Profits were higher than ever.
+&amp;gt;
+&amp;gt;  *Everything* is going according to **plan**.
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;h4 id=&#34;the-quarterly-results-look-great&#34;&gt;The quarterly results look great!&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Revenue was off the chart.&lt;/li&gt;
+&lt;li&gt;Profits were higher than ever.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Everything&lt;/em&gt; is going according to &lt;strong&gt;plan&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;lists&#34;&gt;Lists&lt;/h1&gt;
+&lt;p&gt;You can organize items into ordered and unordered lists.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;ordered-lists&#34;&gt;Ordered Lists&lt;/h3&gt;
+&lt;p&gt;To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be in numerical order, but the list should start with the number one.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item
+&lt;ol&gt;
+&lt;li&gt;Indented item&lt;/li&gt;
+&lt;li&gt;Indented item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Fourth item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;unordered-lists&#34;&gt;Unordered Lists&lt;/h3&gt;
+&lt;p&gt;To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items. Indent one or more items to create a nested list.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;- First item
+- Second item
+- Third item
+    - Indented item
+    - Indented item
+- Fourth item
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item
+&lt;ul&gt;
+&lt;li&gt;Indented item&lt;/li&gt;
+&lt;li&gt;Indented item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fourth item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;horizontal-rules&#34;&gt;Horizontal Rules&lt;/h1&gt;
+&lt;p&gt;To create a horizontal rule, use three or more asterisks (***), dashes (---), or underscores (___) on a line by themselves.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;***
+
+---
+
+_________________
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;links&#34;&gt;Links&lt;/h1&gt;
+&lt;p&gt;To create a link, enclose the link text in brackets (e.g., [Duck Duck Go]) and then follow it immediately with the URL in parentheses (e.g., (&lt;a href=&#34;https://eason366.github.io/&#34;&gt;https://eason366.github.io/&lt;/a&gt;)).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Back to Home Page](https://eason366.github.io/)
+
+Back to [Home](https://eason366.github.io/) Page
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://eason366.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Back to Home Page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Back to &lt;a class=&#34;link&#34; href=&#34;https://eason366.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Home&lt;/a&gt; Page&lt;/p&gt;
+&lt;p&gt;##Adding Titles&lt;/p&gt;
+&lt;p&gt;You can optionally add a title for a link. This will appear as a tooltip when the user hovers over the link. To add a title, enclose it in parentheses after the URL.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Back to Home Page](https://eason366.github.io/ &amp;quot;Back to Eason&#39;s Hugo Blog Home Page&amp;quot;)
+
+Back to [Home](https://eason366.github.io/ &amp;quot;Back to Eason&#39;s Hugo Blog Home Page&amp;quot;) Page
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://eason366.github.io/&#34;  title=&#34;Back to Eason&amp;#39;s Hugo Blog Home Page&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Back to Home Page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Back to &lt;a class=&#34;link&#34; href=&#34;https://eason366.github.io/&#34;  title=&#34;Back to Eason&amp;#39;s Hugo Blog Home Page&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Home&lt;/a&gt; Page&lt;/p&gt;
+&lt;h1 id=&#34;images&#34;&gt;Images&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://Eason366.github.io/img/avatar.jpg&#34; alt=&#34;image&#34;  /&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.markdownguide.org/basic-syntax/&#34;&gt;https://www.markdownguide.org/basic-syntax/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>How to Upload my Blog to Github</title>
+        <link>https://Eason366.github.io/p/how-to-upload-my-blog-to-github/</link>
+        <pubDate>Sun, 07 Feb 2021 19:28:05 -0500</pubDate>
+        
+        <guid>https://Eason366.github.io/p/how-to-upload-my-blog-to-github/</guid>
+        <description>&lt;h1 id=&#34;how-to-upload-my-blog-to-github&#34;&gt;How to Upload my Blog to Github&lt;/h1&gt;
+&lt;h3 id=&#34;upload-local-server&#34;&gt;Upload local server&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt; hugo server -t hugo-theme-stack --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use http://localhost:1313/ to check.&lt;/p&gt;
+&lt;h3 id=&#34;upload-to-my-github&#34;&gt;Upload to my Github&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;	hugo --theme=hugo-theme-stack --baseUrl=&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://Eason366.github.io/&amp;#34;&lt;/span&gt; --buildDrafts
+	#Create web page
+	&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; public
+	#Enter the public folder
+	git add .
+	git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;commit&amp;#34;&lt;/span&gt;
+	git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use &lt;a href=&#34;https://eason366.github.io/&#34;&gt;https://eason366.github.io/&lt;/a&gt; to check.&lt;/p&gt;
+&lt;h3 id=&#34;creat-a-new-blog&#34;&gt;Creat a new Blog&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;hugo new post/#BlogName.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Regression Analysis on Wine Qualit</title>
+        <link>https://Eason366.github.io/p/regression-analysis-on-wine-qualit/</link>
+        <pubDate>Wed, 02 Dec 2020 02:24:35 -0500</pubDate>
+        
+        <guid>https://Eason366.github.io/p/regression-analysis-on-wine-qualit/</guid>
+        <description>&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#introduction&#34; &gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#exploratory-analysis&#34; &gt;Exploratory Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#model-choose&#34; &gt;Model Choose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#model-assumption&#34; &gt;Model Assumption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#model-and-analysis&#34; &gt;Model and Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#conclusion&#34; &gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#references&#34; &gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#appendix&#34; &gt;Appendix&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from &lt;a href=&#34;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/&#34;&gt;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/&lt;/a&gt;. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.&lt;/p&gt;
+&lt;h1 id=&#34;exploratory-analysis&#34;&gt;Exploratory Analysis&lt;/h1&gt;
+&lt;p&gt;Exploratory analysis involved carrying out descriptive statistics for all the variables of interest in the study. For the variable residual sugar, the minimum residual sugar was 0.9 while the maximum was 15.50. The mean residual sugar was 2.539 and the median value was 2.20. For the variable chlorides, the minimum chloride was 0.012 while the maximum was 0.611. The mean chloride level was 0.087 and the median value was 0.079. For the variable total sulfur dioxide, the minimum value was 6 while the maximum was 289. The mean total sulfur dioxide was 46.47 and the median value was 38. For the variable pH, the minimum value was 2.74 while the maximum was 4.01. The mean pH was 3.311 and the median value was 3.31. For the variable sulphates, the minimum value was 0.33 while the maximum was 2. The mean for sulphate was 0.6581 and the median value was 0.62. For the variable alcohol, the minimum value was 8.40 while the maximum was 14.90. The mean for alcohol was 10.42 and the median value was 10.20. For the variable quality, the minimum value was 3 while the maximum was 8. The mean value for quality was 5.638 while the median was 6.00.&lt;/p&gt;
+&lt;h1 id=&#34;model-choose&#34;&gt;Model Choose&lt;/h1&gt;
+&lt;p&gt;Now that we have 11 independent variables, we decide to use the stepwise algorithm for model choose. Among all models, the model with the smallest AIC is selected for fitting. After calculation, finally select the seven independent variables chlorides, alcohol, total.sulfur.dioxide, sulphates, pH, volatile.acidity, free.sulfur.dioxide to predict our dependent variable, quality.&lt;/p&gt;
+&lt;h1 id=&#34;model-assumption&#34;&gt;Model Assumption&lt;/h1&gt;
+&lt;p&gt;Before regression analysis could be carried out, the data was analyzed to investigate its suitability for carrying out multiple regression analysis. To start with, the data was checked for multicollinearity by computing correlations among all the independent variables.  The results of the correlation showed that there was no multicollinearity as no two independent variables had strong correlations with each other. To check if residuals are normally distributed, a QQ plot was also computed in R. The QQ plot for residuals did not show much deviation from the normal. Homoscedasticity assumption was also checked by making a plot of residuals vs predicted values. The plot showed that the assumption was met as values were randomly distributed across the fit line (Illowsky, 2013).  The model assumptions were mostly met and therefore multiple regression could be carried out in R.&lt;/p&gt;
+&lt;h1 id=&#34;model-and-analysis&#34;&gt;Model and Analysis&lt;/h1&gt;
+&lt;p&gt;Multiple linear regression was computed with quality as the dependent variable and residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol as the independent variables.  The overall regression model was statistically significant, F(6,1592) =121.6,  p value&amp;lt;0.0001. This means that a majority of the independent variables are statistically significant predictors of quality. The t analysis of individual variables showed that the variables chlorides (t=-6.827, p&amp;lt;0.001), total sulfur dioxide (t=-5.213, p&amp;lt;0.001), pH (t=-6.561, p&amp;lt;0.001), sulphates (t=10.726, p&amp;lt;0.001), and alcohol (t=18.641=, p&amp;lt;0.001) are significant predictors of quality. Residual sugar was not a statistically significant predictor of quality, t= 0.661, p=0.509.
+The slope coefficient of chlorides was equal to -2.766. This indicates that quality decreases by 2.766 for every 1 increase in the amount of chlorides. The slope coefficient of pH was equal to -0.7588. This indicates that quality decreases by 0.7588 for every 1 increase in the pH. The slope coefficient of total sulfur dioxide was equal to -0.0027888. This indicates that quality decreases by 0.003 for every 1 increase in the total sulfur dioxide. The slope coefficient of alcohol was equal to 0.3207. This indicates that quality increases by 0.3207 for every 1 increase in the amount of alcohol. The slope coefficient of sulphates was equal to 1.18. This indicates that quality increases by 1.18 for every 1 increase in the amount of alcohol.&lt;/p&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;In conclusion, the results of the multiple linear regression showed that that the variables chlorides, total sulfur dioxide, pH, sulphates, and alcohol are significant predictors of quality. One can therefore use the model to predict the quality of wine based on these variables.&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;p&gt;Illowsky, B., Dean, S., &amp;amp; Illowsky, B. (2013). Introductory statistics. OpenStax.&lt;/p&gt;
+&lt;h1 id=&#34;appendix&#34;&gt;Appendix&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;knitr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opts_chunk&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dplyr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GGally&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leaps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read.csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;winequality-red.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;nf&#34;&gt;step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;lm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quality&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;~&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chlorides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;alcohol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;residual.sugar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;total.sulfur.dioxide&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sulphates&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fixed.acidity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;volatile.acidity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;citric.acid&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;free.sulfur.dioxide&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;density&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;direction&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;both&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
