@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <title>Plane_War &middot; Study Blog</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://Eason366.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://Eason366.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://Eason366.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://Eason366.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://Eason366.github.io/">Blackburn</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://Eason366.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://Eason366.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/eason-wang366" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/Eason366" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Plane_War</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Mar 4043, 10:02</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  <h1 id="plane-war-game-program">Plane War Game Program</h1>
+<h2 id="introduction">Introduction</h2>
+<p>I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own. I chose to program an airplane war game.</p>
+<hr>
+<h2 id="create-a-graphics-window">Create a Graphics Window</h2>
+<ul>
+<li>
+<h3 id="load-pygame-model">Load Pygame model</h3>
+<p>Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> pygame
+<span style="color:#f92672">from</span> pygame <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</code></pre></div></li>
+<li>
+<h3 id="initialization-and-exit-of-the-game">Initialization and exit of the game</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pygame.init()</td>
+<td>initialize all imported pygame modules, use it before another modules.</td>
+</tr>
+<tr>
+<td>pygame.quit()</td>
+<td>uninitialize all pygame modules, use it when you want exit the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    pygame<span style="color:#f92672">.</span>init()
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    main()
+    pygame<span style="color:#f92672">.</span>quit()
+</code></pre></div></li>
+<li>
+<h3 id="create-the-main-game-window">Create the main game window</h3>
+<p><code>pygame</code> has a special method <code>pygame.display</code> for creating and managing game windows</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pygame.display.set_mode()</td>
+<td>Initialize the game display window</td>
+</tr>
+<tr>
+<td>pygame.display.update()</td>
+<td>Refresh the screen content display</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    set_mode(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, depth<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, display<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, vsync<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#f92672">-&gt;</span> Surface
+</code></pre></div><p>This function will create a display Surface. The arguments passed in are requests for a display type. The actual created display will be the best possible match supported by the system.</p>
+<p><strong>Parameter</strong></p>
+<ul>
+<li>The <code>size</code> argument is a pair of numbers representing the width and height.</li>
+<li>The <code>flags</code> argument is a collection of additional options.</li>
+<li>The <code>depth</code> argument represents the number of bits to use for color.</li>
+</ul>
+<p>Here are the display flags you will want to choose from:</p>
+<pre><code>pygame.FULLSCREEN    create a fullscreen display
+pygame.DOUBLEBUF     recommended for HWSURFACE or OPENGL
+pygame.HWSURFACE     hardware accelerated, only in FULLSCREEN
+pygame.OPENGL        create an OpenGL-renderable display
+pygame.RESIZABLE     display window should be sizeable
+pygame.NOFRAME       display window will have no border or controls
+pygame.SCALED        resolution depends on desktop size and scale graphics
+pygame.SHOWN         window is opened in visible mode (default)
+pygame.HIDDEN        window is opened in hidden mode
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    pygame<span style="color:#f92672">.</span>init()
+    <span style="color:#75715e"># Set the windows</span>
+    screen <span style="color:#f92672">=</span> pygame<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>set_mode(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">480</span>, <span style="color:#ae81ff">700</span>), flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    main()
+    pygame<span style="color:#f92672">.</span>quit()
+</code></pre></div></li>
+<li>
+<h3 id="game-loop">Game loop</h3>
+<ul>
+<li>In order to ensure that the <strong>game program</strong> does not exit immediately after it is started, a game loop is usually added to the <strong>game program</strong></li>
+<li>The so-called <strong>game loop</strong> is an <strong>infinite loop</strong></li>
+<li>Below the code for creating the game window, add an infinite loop</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    pygame<span style="color:#f92672">.</span>init()
+    <span style="color:#75715e"># Set the windows</span>
+    screen <span style="color:#f92672">=</span> pygame<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>set_mode(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">480</span>, <span style="color:#ae81ff">700</span>), flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    <span style="color:#66d9ef">while</span> True:
+        pygame<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>update()
+</code></pre></div></li>
+<li>
+<h3 id="add-events-listener">Add Events Listener</h3>
+<p>When we run the program, we find that the window has appeared, but we cannot manipulate the window, or even close the window. Therefore, we should add an Events Listener to control the closing of the window.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Set Events Listener</span>
+<span style="color:#66d9ef">for</span> events <span style="color:#f92672">in</span> pygame<span style="color:#f92672">.</span>event<span style="color:#f92672">.</span>get():
+    <span style="color:#66d9ef">if</span> events<span style="color:#f92672">.</span>type <span style="color:#f92672">==</span> pygame<span style="color:#f92672">.</span>QUIT:
+        pygame<span style="color:#f92672">.</span>quit()
+        exit()
+</code></pre></div></li>
+</ul>
+<hr>
+<h2 id="draw-image">Draw image</h2>
+<p>In the game, most of the <strong>game elements</strong> that can be seen are <strong>images</strong></p>
+<ul>
+<li>
+<p>We need to follow <strong>three steps</strong> to display the <strong>images</strong> in windows:</p>
+<ul>
+<li>Use <code>pygame.image.load()</code> to load image data</li>
+<li>Call the <code>blit</code> method to draw the image to the specified position</li>
+<li>Call the <code>pygame.display.update()</code> method to update the display of the entire screen</li>
+</ul>
+</li>
+<li>
+<h3 id="background-and-player">Background and Player</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    pygame<span style="color:#f92672">.</span>init()
+    <span style="color:#75715e"># Set the windows</span>
+    screen <span style="color:#f92672">=</span> pygame<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>set_mode(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">480</span>, <span style="color:#ae81ff">700</span>), flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    background <span style="color:#f92672">=</span> pygame<span style="color:#f92672">.</span>image<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;images/background.png&#34;</span>)
+    player <span style="color:#f92672">=</span> pygame<span style="color:#f92672">.</span>image<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;images/me1.png&#34;</span>)
+    <span style="color:#66d9ef">while</span> True:
+        <span style="color:#75715e"># Set Events Listener</span>
+        <span style="color:#66d9ef">for</span> events <span style="color:#f92672">in</span> pygame<span style="color:#f92672">.</span>event<span style="color:#f92672">.</span>get():
+            <span style="color:#66d9ef">if</span> events<span style="color:#f92672">.</span>type <span style="color:#f92672">==</span> pygame<span style="color:#f92672">.</span>QUIT:
+                pygame<span style="color:#f92672">.</span>quit()
+                exit()
+        screen<span style="color:#f92672">.</span>blit(background, (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>))
+        screen<span style="color:#f92672">.</span>blit(player, ((<span style="color:#ae81ff">480</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">102</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">500</span>))
+        pygame<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>update()
+</code></pre></div><ul>
+<li>NOTE: Please blit the Background first, then blit the Player so that the Player is on top of the Background</li>
+</ul>
+<hr>
+</li>
+</ul>
+<h2 id="control-plane-and-keyboard-listener">Control Plane and Keyboard Listener</h2>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fEason366.github.io%2fpost%2fplane_war%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fEason366.github.io%2fpost%2fplane_war%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fEason366.github.io%2fpost%2fplane_war%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fEason366.github.io%2fpost%2fplane_war%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fEason366.github.io%2fpost%2fplane_war%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fEason366.github.io%2fpost%2fplane_war%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://Eason366.github.io/post/cse385/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://Eason366.github.io/post/cse385/">CSE 385 Database</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://Eason366.github.io/js/ui.js"></script>
+<script src="https://Eason366.github.io/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'Your Google Analytics tracking ID', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Eason Study Blog</title>
+    <title>Study Blog</title>
     <link>https://Eason366.github.io/</link>
-    <description>Recent content on Eason Study Blog</description>
+    <description>Recent content on Study Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Feb 2021 17:24:37 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 10:02:08 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plane_War</title>
+      <link>https://Eason366.github.io/post/plane_war/</link>
+      <pubDate>Thu, 04 Mar 2021 10:02:08 -0500</pubDate>
+      
+      <guid>https://Eason366.github.io/post/plane_war/</guid>
+      <description>Plane War Game Program Introduction I always think that interest is the best teacher. It is easier for us to learn what we are interested in. Especially after learning object-oriented and class programming, I have always wanted to create something, and games are undoubtedly a good choice. First of all because I like playing games very much. Secondly, because the game has very good visual effects. I believe everyone wants to have a game of their own.</description>
+    </item>
+    
     <item>
       <title>CSE 385 Database</title>
       <link>https://Eason366.github.io/post/cse385/</link>
@@ -22,8 +31,8 @@
       <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
       
       <guid>https://Eason366.github.io/post/markdown/</guid>
-      <description>Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
-Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level. For example, to create a heading level three (), use three number signs (e.</description>
+      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
+Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</description>
     </item>
     
     <item>
@@ -43,7 +52,7 @@ Creat a new Blog hugo new post/#BlogName.md </description>
       <pubDate>Wed, 02 Dec 2020 02:24:35 -0500</pubDate>
       
       <guid>https://Eason366.github.io/post/project/</guid>
-      <description>Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.</description>
+      <description>Introduction Exploratory Analysis Model Choose Model Assumption Model and Analysis Conclusion References Appendix  Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.</description>
     </item>
     
   </channel>

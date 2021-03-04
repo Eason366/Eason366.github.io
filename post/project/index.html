@@ -1,84 +1,252 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <title>Regression Analysis on Wine Qualit // Eason Study Blog</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.80.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Yuchen(Eason) Wang" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://Eason366.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <title>Regression Analysis on Wine Qualit &middot; Study Blog</title>
 
     
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Regression Analysis on Wine Qualit"/>
-<meta name="twitter:description" content="Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R."/>
 
-    <meta property="og:title" content="Regression Analysis on Wine Qualit" />
-<meta property="og:description" content="Introduction The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://Eason366.github.io/post/project/" />
-<meta property="article:published_time" content="2020-12-02T02:24:35-05:00" />
-<meta property="article:modified_time" content="2020-12-02T02:24:35-05:00" />
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://Eason366.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://Eason366.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://Eason366.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://Eason366.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
 
 
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://Eason366.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Yuchen(Eason) Wang" /></a>
-      <h1>Eason Study Blog</h1>
-      <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="/">Home</a>
-      </nav>
-      <p>I am a student of Miami University, my major is mathematics and statistics, and my minor is CSE. I hope to record and share my learning progress here.</p>
-      <div class="app-header-social">
-        
-          <a target="_blank" href="https://github.com/Eason366" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
-  <title>github</title>
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-</svg></a>
-        
-      </div>
-    </header>
-    <main class="app-container">
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://Eason366.github.io/">Blackburn</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Regression Analysis on Wine Qualit</h1>
-      <div class="post-meta">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Dec 2, 2020
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          4 min read
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
-  <title>tag</title>
-  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
-</svg>
-              <a class="tag" href="https://Eason366.github.io/tags/r/">R</a>
-              <a class="tag" href="https://Eason366.github.io/tags/regression/">Regression</a>
-              <a class="tag" href="https://Eason366.github.io/tags/wine/">Wine</a>
-              <a class="tag" href="https://Eason366.github.io/tags/project/">Project</a>
-        </div>
-      </div>
-    </header>
-    <div class="post-content">
-      <h1 id="introduction">Introduction</h1>
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://Eason366.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://Eason366.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/eason-wang366" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/Eason366" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Regression Analysis on Wine Qualit</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Dec 20212, 02:24</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://Eason366.github.io/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://Eason366.github.io/tags/regression">Regression</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://Eason366.github.io/tags/wine">Wine</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://Eason366.github.io/tags/project">Project</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#exploratory-analysis">Exploratory Analysis</a></li>
+<li><a href="#model-choose">Model Choose</a></li>
+<li><a href="#model-assumption">Model Assumption</a></li>
+<li><a href="#model-and-analysis">Model and Analysis</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#appendix">Appendix</a></li>
+</ul>
+<h1 id="introduction">Introduction</h1>
 <p>The study of interest was with regards to the factors that affect the quality of red wine. The data used was obtained from <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/">https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/</a>. For the study, quality was therefore used as the dependent variable, while independent variables used were; residual sugar, chlorides, total sulfur dioxide, pH, sulphates, and alcohol. To identify if the independent variables were significant predictors of quality, multiple linear regression was carried out using R.</p>
 <h1 id="exploratory-analysis">Exploratory Analysis</h1>
 <p>Exploratory analysis involved carrying out descriptive statistics for all the variables of interest in the study. For the variable residual sugar, the minimum residual sugar was 0.9 while the maximum was 15.50. The mean residual sugar was 2.539 and the median value was 2.20. For the variable chlorides, the minimum chloride was 0.012 while the maximum was 0.611. The mean chloride level was 0.087 and the median value was 0.079. For the variable total sulfur dioxide, the minimum value was 6 while the maximum was 289. The mean total sulfur dioxide was 46.47 and the median value was 38. For the variable pH, the minimum value was 2.74 while the maximum was 4.01. The mean pH was 3.311 and the median value was 3.31. For the variable sulphates, the minimum value was 0.33 while the maximum was 2. The mean for sulphate was 0.6581 and the median value was 0.62. For the variable alcohol, the minimum value was 8.40 while the maximum was 14.90. The mean for alcohol was 10.42 and the median value was 10.20. For the variable quality, the minimum value was 3 while the maximum was 8. The mean value for quality was 5.638 while the median was 6.00.</p>
 <h1 id="model-choose">Model Choose</h1>
+<p>Now that we have 11 independent variables, we decide to use the stepwise algorithm for model choose. Among all models, the model with the smallest AIC is selected for fitting. After calculation, finally select the seven independent variables chlorides, alcohol, total.sulfur.dioxide, sulphates, pH, volatile.acidity, free.sulfur.dioxide to predict our dependent variable, quality.</p>
 <h1 id="model-assumption">Model Assumption</h1>
 <p>Before regression analysis could be carried out, the data was analyzed to investigate its suitability for carrying out multiple regression analysis. To start with, the data was checked for multicollinearity by computing correlations among all the independent variables.  The results of the correlation showed that there was no multicollinearity as no two independent variables had strong correlations with each other. To check if residuals are normally distributed, a QQ plot was also computed in R. The QQ plot for residuals did not show much deviation from the normal. Homoscedasticity assumption was also checked by making a plot of residuals vs predicted values. The plot showed that the assumption was met as values were randomly distributed across the fit line (Illowsky, 2013).  The model assumptions were mostly met and therefore multiple regression could be carried out in R.</p>
 <h1 id="model-and-analysis">Model and Analysis</h1>
@@ -89,14 +257,141 @@ The slope coefficient of chlorides was equal to -2.766. This indicates that qual
 <h1 id="references">References</h1>
 <p>Illowsky, B., Dean, S., &amp; Illowsky, B. (2013). Introductory statistics. OpenStax.</p>
 <h1 id="appendix">Appendix</h1>
-<p><a href="http://ceclnx01.cec.miamioh.edu/~wangy366/Regression-Analysis-on-Wine-Qualit/" title="Wine Quality">All project contents</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">knitr<span style="color:#f92672">::</span>opts_chunk<span style="color:#f92672">$</span><span style="color:#a6e22e">set</span>(echo <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+<span style="color:#a6e22e">library</span>(dplyr)
+<span style="color:#a6e22e">library</span>(GGally)
+<span style="color:#a6e22e">library</span>(leaps)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/</span>
+df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;winequality-red.csv&#34;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;;&#34;</span>)
+<span style="color:#a6e22e">summary</span>(df)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">step</span>(<span style="color:#a6e22e">lm</span>(quality<span style="color:#f92672">~</span> chlorides <span style="color:#f92672">+</span>alcohol<span style="color:#f92672">+</span>residual.sugar<span style="color:#f92672">+</span>total.sulfur.dioxide
+        <span style="color:#f92672">+</span>sulphates<span style="color:#f92672">+</span>pH<span style="color:#f92672">+</span>fixed.acidity<span style="color:#f92672">+</span>volatile.acidity<span style="color:#f92672">+</span>citric.acid
+        <span style="color:#f92672">+</span>free.sulfur.dioxide<span style="color:#f92672">+</span>density , data <span style="color:#f92672">=</span> df), direction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;both&#34;</span>)
+</code></pre></div>
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fEason366.github.io%2fpost%2fproject%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fEason366.github.io%2fpost%2fproject%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fEason366.github.io%2fpost%2fproject%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fEason366.github.io%2fpost%2fproject%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fEason366.github.io%2fpost%2fproject%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fEason366.github.io%2fpost%2fproject%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
 
-    </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
 
-    </main>
-  </body>
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://Eason366.github.io/post/blog/">How to Upload my Blog to Github</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://Eason366.github.io/post/blog/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://Eason366.github.io/js/ui.js"></script>
+<script src="https://Eason366.github.io/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'Your Google Analytics tracking ID', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="https://Eason366.github.io/js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
 </html>
+

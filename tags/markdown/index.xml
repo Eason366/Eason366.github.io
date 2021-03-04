@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Markdown on Eason Study Blog</title>
+    <title>Markdown on Study Blog</title>
     <link>https://Eason366.github.io/tags/markdown/</link>
-    <description>Recent content in Markdown on Eason Study Blog</description>
+    <description>Recent content in Markdown on Study Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Feb 2021 00:27:10 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,8 @@
       <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
       
       <guid>https://Eason366.github.io/post/markdown/</guid>
-      <description>Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
-Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level. For example, to create a heading level three (), use three number signs (e.</description>
+      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
+Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</description>
     </item>
     
   </channel>
