@@ -73,15 +73,7 @@
         <li >
             <a href='/'>
                 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
                 
                 <span>Home</span>
             </a>
@@ -90,18 +82,22 @@
         
 
         <li >
-            <a href='/about'>
+            <a href='https://github.com/Eason366'>
                 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="7" r="4" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/></svg>
                 
-                <span>About</span>
+                <span>Github</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://www.linkedin.com/in/eason-wang366/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.01"/><line x1="12" y1="16" x2="12" y2="11"/><path d="M16 16v-3a2 2 0 0 0 -4 0"/></svg>
+                
+                <span>LinkedIn</span>
             </a>
         </li>
         
@@ -315,6 +311,94 @@ pygame.HIDDEN        window is opened in hidden mode
 </li>
 </ul>
 <h2 id="control-plane-and-keyboard-listener">Control Plane and Keyboard Listener</h2>
+<p>Now, we have Plane, but we can&rsquo;t control Plane yet. To make Plane move, we need to use <code>pygame.key.get_pressed()</code> to get Keyboard Listener</p>
+<ul>
+<li>
+<h3 id="keyboard-listener">Keyboard Listener</h3>
+<p>Before setting the Keyboard Listener, we need to give the aircraft a <strong>Speed</strong> parameter to control the distance the aircraft moves each time.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python">    <span class="n">speed</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="c1"># Set Keyboard Listener</span>
+    <span class="n">key_pressed</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
+
+    <span class="c1"># Set UP</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_w</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_UP</span><span class="p">]:</span>
+        <span class="n">y</span> <span class="o">-=</span> <span class="n">speed</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;W&#34;</span><span class="p">)</span>
+
+    <span class="c1"># Set DOWN</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_s</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_DOWN</span><span class="p">]:</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="n">speed</span>
+
+    <span class="c1"># Set LEFT</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_a</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_LEFT</span><span class="p">]:</span>
+        <span class="n">x</span> <span class="o">-=</span> <span class="n">speed</span>
+
+    <span class="c1"># Set RIGHT</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_d</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="n">speed</span>
+
+    <span class="c1"># Set SPACE</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_SPACE</span><span class="p">]:</span>
+        <span class="k">pass</span>       
+</code></pre></div><p>Now, we can control Plane through the mouse. However, we found that if the operation is improper, Plane will easily fly out of Windows, which is something we don&rsquo;t want to see. Therefore, we have to set the Plane control to prevent the aircraft from flying out of Windows.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python">    <span class="c1"># Set Keyboard Listener</span>
+    <span class="n">key_pressed</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">get_pressed</span><span class="p">()</span>
+
+    <span class="c1"># Set UP</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_w</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_UP</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">speed</span> <span class="o">&lt;=</span> <span class="mi">700</span> <span class="o">-</span> <span class="mi">126</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">-=</span> <span class="n">speed</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Set DOWN</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_s</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_DOWN</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">&lt;=</span> <span class="mi">700</span> <span class="o">-</span> <span class="mi">126</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">+=</span> <span class="n">speed</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="mi">700</span> <span class="o">-</span> <span class="mi">126</span>
+
+    <span class="c1"># Set LEFT</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_a</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_LEFT</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">speed</span> <span class="o">&lt;=</span> <span class="mi">480</span> <span class="o">-</span> <span class="mi">102</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">-=</span> <span class="n">speed</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Set RIGHT</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_d</span><span class="p">]</span> <span class="ow">or</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_RIGHT</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">speed</span> <span class="o">&lt;=</span> <span class="mi">480</span> <span class="o">-</span> <span class="mi">102</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">+=</span> <span class="n">speed</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="mi">480</span> <span class="o">-</span> <span class="mi">102</span>
+
+    <span class="c1"># Set SPACE</span>
+    <span class="k">if</span> <span class="n">key_pressed</span><span class="p">[</span><span class="n">K_SPACE</span><span class="p">]:</span>
+        <span class="k">pass</span>       
+</code></pre></div></li>
+<li>
+<h3 id="persistence-of-vision">Persistence of vision</h3>
+<p>We set the speed to 10, and then run, we will find that Plane is moving too fast, and the CPU usage is also high. This is because Python loops too quickly every time, so it loops too many times in a second.</p>
+<p>When an object is moving fast, when the image seen by the human eye disappears, the human eye can continue to retain its image. The image is about 0.1-0.4 seconds. This phenomenon is called <strong>Persistence of vision</strong>.</p>
+<p>According to the <strong>Persistence of vision</strong>, we can reduce the number of <strong>infinite loops</strong>, thereby slowing down the movement speed of the Plane and reducing the CPU usage of the program.</p>
+<p>There are two way to reduce the number of <strong>infinite loops</strong>:</p>
+<ul>
+<li>Use <code>pygame.time.Clock()</code> to keep the game running slower than the given ticks per second.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+</code></pre></div><ul>
+<li>Use <code>time</code> module to sleep loop.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-Python" data-lang="Python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+</code></pre></div><hr>
+</li>
+</ul>
+<h2 id="object-oriented-programming">Object-Oriented Programming</h2>
 
 </section>
 
