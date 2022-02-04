@@ -13,7 +13,7 @@
       <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
       
       <guid>https://Eason366.github.io/p/markdown-guide/</guid>
-      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
+      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference Table  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
 Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</description>
     </item>
     

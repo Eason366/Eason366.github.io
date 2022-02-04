@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Study Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 10:02:08 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://Eason366.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sorting Algorithm</title>
+      <link>https://Eason366.github.io/p/sorting-algorithm/</link>
+      <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://Eason366.github.io/p/sorting-algorithm/</guid>
+      <description>Sorting Algorithm  1. Bubble Sort  1.1 Time Complexity 1.2 Code   2. Selection Sort  2.1 Time Complexity 2.2 Code   3. Insertion Sort  3.1 Time Complexity 3.2 Code    1.Bubble Sort 1.1 Time Complexity    Time Complexity Value     Best $O(n)$   Worse $O(n^2)$   Average $O(n^2)$    1.2 Code public class BubbleSort implements IArraySort { @Override public int[] sort(int[] sourceArray) throws Exception { int[] arr = Arrays.</description>
+    </item>
+    
     <item>
       <title>Plane War</title>
       <link>https://Eason366.github.io/p/plane-war/</link>
@@ -31,7 +40,7 @@
       <pubDate>Mon, 08 Feb 2021 00:27:10 -0500</pubDate>
       
       <guid>https://Eason366.github.io/p/markdown-guide/</guid>
-      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
+      <description>Overview Headings Bold Italic Bold and Italic Blockquotes Lists Horizontal Rules Links Images Reference Table  Overview Nearly all Markdown applications support the basic syntax outlined in John Gruber’s original design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
 Headings To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level.</description>
     </item>
     
