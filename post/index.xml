@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Study Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://Eason366.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 01:10:27 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PageHelper</title>
+      <link>https://Eason366.github.io/p/pagehelper/</link>
+      <pubDate>Tue, 08 Mar 2022 01:10:27 -0500</pubDate>
+      
+      <guid>https://Eason366.github.io/p/pagehelper/</guid>
+      <description>Question Describe *************************** APPLICATION FAILED TO START *************************** Description: The dependencies of some of the beans in the application context form a cycle: ┌──-&amp;gt;──┐ | com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration └──&amp;lt;-──┘ Action: Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true. This error is because the version of spring-boot-starter-parent does not match the version of pagehelper</description>
+    </item>
+    
     <item>
       <title>Sorting Algorithm</title>
       <link>https://Eason366.github.io/p/sorting-algorithm/</link>

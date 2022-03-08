@@ -6,7 +6,54 @@
         <description>Recent content on Study Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 04 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Mar 2022 01:10:27 -0500</lastBuildDate><atom:link href="https://Eason366.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PageHelper</title>
+        <link>https://Eason366.github.io/p/pagehelper/</link>
+        <pubDate>Tue, 08 Mar 2022 01:10:27 -0500</pubDate>
+        
+        <guid>https://Eason366.github.io/p/pagehelper/</guid>
+        <description>&lt;h2 id=&#34;question-describe&#34;&gt;Question Describe&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──-&amp;gt;──┐
+|  com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration
+└──&amp;lt;-──┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This error is because the version of &lt;code&gt;spring-boot-starter-parent&lt;/code&gt; does not match the version of &lt;code&gt;pagehelper&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;My version of &lt;code&gt;spring-boot-starter-parent&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;parent&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&#34;nt&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-parent&lt;span class=&#34;nt&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.6.4&lt;span class=&#34;nt&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;relativePath/&amp;gt;&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- lookup parent from repository --&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;nt&#34;&gt;&amp;lt;/parent&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;My version of &lt;code&gt;pagehelper&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.github.pagehelper&lt;span class=&#34;nt&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;pagehelper-spring-boot-starter&lt;span class=&#34;nt&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+		&lt;span class=&#34;nt&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.2.13&lt;span class=&#34;nt&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+	&lt;span class=&#34;nt&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So, I just update the version of &lt;code&gt;pagehelper&lt;/code&gt; to v1.4.1&lt;/p&gt;
+&lt;p&gt;This version fix the cycle dependencies&lt;/p&gt;
+&lt;p&gt;You should Update the following dependency to your &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.github.pagehelper&lt;span class=&#34;nt&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;pagehelper-spring-boot-starter&lt;span class=&#34;nt&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.4.1&lt;span class=&#34;nt&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Sorting Algorithm</title>
         <link>https://Eason366.github.io/p/sorting-algorithm/</link>
         <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
